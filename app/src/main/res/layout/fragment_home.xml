@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
     <androidx.core.widget.NestedScrollView
@@ -51,14 +52,82 @@
                 android:textColor="#444444"
                 android:layout_marginTop="20dp"
                 android:textSize="15sp"/>
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_mood"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:layout_marginLeft="30dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"/>
+                android:layout_marginRight="30dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:padding="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_happy"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:src="@drawable/icon_sad"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:layout_marginRight="10dp"
+                        android:src="@drawable/icon_angry"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:src="@drawable/icon_lonely"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:src="@drawable/icon_calm"/>
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:padding="5dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:src="@drawable/icon_afraid"/>
+
+                </LinearLayout>
+            </HorizontalScrollView>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -168,14 +237,96 @@
                 android:layout_marginTop="5dp"
                 android:textSize="15sp"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_contacts"
+            <HorizontalScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="10dp"
-                android:orientation="horizontal"/>
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/profile_imge"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vallery, M.Pd"
+                            android:textSize="19sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="XI-A Teacher" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/rounded_white"
+                        android:elevation="2dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/img_profile_wmn"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Lusiana, M.Pd"
+                            android:textSize="19sp"
+                            android:textStyle="bold"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Psychologist (~4yr) " />
+                    </LinearLayout>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See All"
+                        android:textAllCaps="false"
+                        android:background="@drawable/rounded_white"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/rv_contacts"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="15dp"-->
+<!--                android:layout_marginLeft="30dp"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:orientation="horizontal"/>-->
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
